@@ -1,14 +1,31 @@
 spring:
   jmx:
     enabled: true
-
   application:
     name: @project.name@
 
+info:
+  application:
+    name: @project.name@
+    version: @project.version@
+    javaVersion: @java.version@
+
 management:
+  info:
+    env:
+      enabled: true
+  # individually configures the endpoint identified by endpointId, which may define its own unique configurable properties
   endpoint:
     shutdown:
       enabled: true
+    #https://docs.spring.io/spring-boot/docs/2.1.11.RELEASE/reference/html/production-ready-endpoints.html#_auto_configured_healthindicators
+    health:
+      probes:
+        enabled: true
+      #group:
+      show-details: always
+
+  #globally configures common endpoint properties and the ways in which endpoints may be accessed.
   endpoints:
     jmx:
       exposure:
@@ -16,3 +33,4 @@ management:
     web:
       exposure:
         include: "*"
+      #base-path: /actuatornew

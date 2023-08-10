@@ -1,7 +1,6 @@
 # webflux-actuator
 
 Useful links :
-
 - [https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html)
 - [https://docs.spring.io/spring-boot/docs/3.1.1/actuator-api/htmlsingle/](https://docs.spring.io/spring-boot/docs/3.1.1/actuator-api/htmlsingle/)
 - [Monitor over JMX](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.jmx)

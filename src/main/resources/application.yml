@@ -18,19 +18,25 @@ management:
   endpoint:
     shutdown:
       enabled: true
-    #https://docs.spring.io/spring-boot/docs/2.1.11.RELEASE/reference/html/production-ready-endpoints.html#_auto_configured_healthindicators
     health:
       probes:
         enabled: true
       #group:
       show-details: always
+#    prometheus:
+#      enabled: true
 
   #globally configures common endpoint properties and the ways in which endpoints may be accessed.
   endpoints:
     jmx:
+#      domain: ""
+#      static-names: ""
       exposure:
         include: "*"
+#        exclude: ""
+
     web:
+      #base-path: /actuatornew
       exposure:
         include: "*"
-      #base-path: /actuatornew
+
